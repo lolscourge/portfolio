@@ -1,75 +1,51 @@
 <!DOCTYPE html>
-<html style="background-color: rebeccapurple" class="has-navbar-fixed-top">
+<html class="has-navbar-fixed-top">
   <head>
-    <style>
-    .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-    }
-    .wrapper {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-      margin: 0 auto;
-        }
-    .always-show {
-      display: block !important;
-    }
-
-    </style>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Harry's Coding Portfolio</title>
-    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/colorchange.js"></script>
   </head>
-<body>
-  <header>
-    <section class="hero">
-        
-      <h1 class="title is-1 center wrapper" style="color: white">Harry's Coding Portfolio</h1>
-      
-      <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation" style="display:block !important">
-        <div id="navbar" class="navbar-menu">
-          <div class="navbar-start"> 
-            <a href="index.html" class="navbar-item"> Home </a>
-            <a class="navbar-item"> Portfolio </a>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link"> More </a>
-              <div class="navbar-dropdown">    
-                <a class="navbar-item"> About </a>
-                <a class="navbar-item"> CV </a>
-                <a class="navbar-item"> Contact </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item"> Report an issue</a>
-              </div>
-            </div>
-          </div>
-        </div>
+
+  <body onload="myFunction()">
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">home</a>
+            <a href="index.html">about</a>
+            <a href="index.html">more</a>
+          </li>
+        </ul>
       </nav>
+    </header>
+    <section class="text-center">
+      <h1>my<span id="randomcolor"> &lt;code&gt;</span> portfolio</h1>
 
-    </section>
-  </header>
-   
-  <br>
-
-    <section id=aboutharry class="is-primary wrapper">
-
-      <img src="https://zyf8i1fxrou2h83snrgcgr3a-wpengine.netdna
--ssl.com/wp-content/uploads/place-holder-avatar.jpg" alt="Avatar" 
-style="height: 25%; width: 25%; border-radius: 50%" class="center">
-
-      <br>
-      <br>
-
-      <p style="color: white">Harry is a junior developer who's interested in web design and mobile
-         first development. He is currently learning about HTML, CSS and javascript. This webpage was
-         his first project.
+      <p>
+        Harry is an <b>aspiring web developer</b>. He is currently learning
+        about HTML, CSS and javascript. This webpage was his first project.
       </p>
     </section>
 
-</body>
+    <footer
+      style="
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+      "
+    >
+      <ul>
+        <li>
+          <a href="index.html">LinkedIn</a>
+          <a href="index.html">GitHub</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>
-  
