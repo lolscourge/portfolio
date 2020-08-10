@@ -98,3 +98,62 @@ footer {
   padding: 2px 16px;
 }
 
+/* CV CSS */
+
+#cv {
+  margin: auto;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: double;
+
+  display: flex;
+  align-items: stretch baseline;
+  justify-content: left;
+  flex-flow: wrap;
+}
+
+#name {
+
+  width: 48%;
+  margin-left: 0.5%;
+  vertical-align: bottom;
+  text-align: left;
+}
+
+#PersonalProfile { 
+  width: auto;
+  margin: 0.5%;
+  vertical-align: bottom;
+}
+
+#WorkExperience { 
+  width: 48%;
+  margin: 0.5%;
+  vertical-align: bottom;
+}
+
+#Education { 
+  width: 48%;
+  margin: 0.5%;
+  vertical-align: bottom;
+}
+
+#WorkandEducation {  margin: 0;
+  display: flex;
+  align-items: stretch baseline;
+  justify-content: left;
+  flex-flow: wrap;}
+
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
