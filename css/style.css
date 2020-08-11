@@ -28,8 +28,6 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-
 a {
   text-decoration: none;
   color: white;
@@ -129,13 +127,7 @@ footer {
   vertical-align: bottom;
 }
 
-#WorkExperience { 
-  width: 48%;
-  margin: 0.5%;
-  vertical-align: bottom;
-}
-
-#Education { 
+#WorkExperience, #Education { 
   width: 48%;
   margin: 0.5%;
   vertical-align: bottom;
@@ -149,16 +141,18 @@ footer {
 
 @media only screen and (max-width: 800px) {
 
-  #Education { 
+  #Education, #WorkExperience { 
     width: 100%;
     margin: 0.5%;
     vertical-align: bottom;
   }
 
-  #WorkExperience { 
+  #name {
+
     width: 100%;
-    margin: 0.5%;
+    margin-left: 0.5%;
     vertical-align: bottom;
+    text-align: left;
   }
 
   .card {
@@ -172,11 +166,4 @@ footer {
     vertical-align: bottom;
   }
 
-  #name {
-
-    width: 100%;
-    margin-left: 0.5%;
-    vertical-align: bottom;
-    text-align: left;
-  }
 }
