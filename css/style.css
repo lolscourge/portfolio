@@ -68,6 +68,8 @@ footer {
 }
 
 .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* makes the zoom and shadow effects smooth */
+  will-change: transform, box-shadow; /* optimization hint for the browser */
   background-color: #333;
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -79,7 +81,8 @@ footer {
 
 
 .card:hover {
-  box-shadow: 0 2px 6px 0 black
+  box-shadow: 0 2px 6px 0 #333;
+  transform: scale(1.05); /* slightly zoom in */
 }
 
 .container {
