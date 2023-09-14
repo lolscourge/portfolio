@@ -43,6 +43,27 @@ li a:hover {
 .text-center {
   color: white;
   text-align: center;
+  
+}
+.text-left {
+  color: white;
+  align-items: left stretch;
+  justify-content: left;
+  flex-flow: wrap;
+  padding-left: 25px;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;  /* Ensures it's behind the main content */
+}
+.h1 {
+  font-size: 75px;
+  flex-wrap: wrap;
 }
 
 footer {
@@ -67,12 +88,16 @@ footer {
   }
 }
 
+.dropshadow {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+
+}
+
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* makes the zoom and shadow effects smooth */
+  transition: transform 0.3s ease;  /* makes the zoom and shadow effects smooth */
   will-change: transform, box-shadow; /* optimization hint for the browser */
   background-color: #333;
   color: white;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 25%;
   margin: 1%;
@@ -81,8 +106,7 @@ footer {
 
 
 .card:hover {
-  box-shadow: 0 2px 6px 0 #333;
-  transform: scale(1.05); /* slightly zoom in */
+  transform: scale(1.02); /* slightly zoom in */
 }
 
 .container {
