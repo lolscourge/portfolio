@@ -1,17 +1,27 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-// Make canvas full screen
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-window.addEventListener('resize', function() {
+// Initialize canvas
+function setCanvasSize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+}
 
-    // Reinitialize circles if window is resized
-    initCircles();
+setCanvasSize();
+
+window.addEventListener('resize', function() {
+    setCanvasSize();
+    
+    let dimension = Math.min(innerWidth, innerHeight);
+    let newRadius = dimension * radiusPercentage;
+
+    for (let circle of circleArray) {
+        circle.radius = newRadius;
+        circle.x = Math.min(canvas.width - circle.radius, Math.max(circle.radius, circle.x));
+        circle.y = Math.min(canvas.height - circle.radius, Math.max(circle.radius, circle.y));
+    }
 });
+
 
 class Circle {
     constructor(x, y, radius, dx, dy, initialSpeed) {
@@ -85,10 +95,12 @@ class Circle {
 
 let circleArray = [];
 
+let radiusPercentage = 0.1; // 10% of the smaller dimension
 for (let i = 0; i < 5; i++) {
-    let radius = 100;
-    let x = Math.random() * (innerWidth - radius * 1) + radius;
-    let y = Math.random() * (innerHeight - radius * 1) + radius;
+    let dimension = Math.min(innerWidth, innerHeight);
+    let radius = dimension * radiusPercentage;
+    let x = Math.random() * (innerWidth - 2 * radius) + radius; // Ensure they are fully within the screen
+    let y = Math.random() * (innerHeight - 2 * radius) + radius;
     let dx = (Math.random() - 0.5) * 1.5; // Speed in x-direction
     let dy = (Math.random() - 0.5) * 1.5; // Speed in y-direction
     circleArray.push(new Circle(x, y, radius, dx, dy));
@@ -111,6 +123,11 @@ function animate() {
     for (let circle of circleArray) {
         circle.update();
     }
+}
+
+for (let circle of circleArray) {
+    circle.x = Math.min(canvas.width - circle.radius, Math.max(circle.radius, circle.x));
+    circle.y = Math.min(canvas.height - circle.radius, Math.max(circle.radius, circle.y));
 }
 
 animate();
