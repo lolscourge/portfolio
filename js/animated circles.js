@@ -73,7 +73,7 @@ class Circle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+        ctx.fillStyle = 'rgba(3, 3, 3, 0.05)';
         ctx.fill();
     }
 

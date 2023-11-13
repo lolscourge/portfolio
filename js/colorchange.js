@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+  textColourChange();
+});
+
+
 function textColourChange() {
   window.setTimeout("textColourChange()", 500);
   var x = document.getElementById("randomcolor"),
